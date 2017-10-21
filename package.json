@@ -1,6 +1,6 @@
 {
-  "name": "react-native-carousel",
-  "version": "0.10.0",
+  "name": "@rolandhordos/react-native-carousel",
+  "version": "0.11.0",
   "description": "Simple carousel component for react-native",
   "main": "Carousel.js",
   "scripts": {
@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nick/react-native-carousel.git"
+    "url": "https://github.com/rolandhordos/react-native-carousel.git"
   },
   "keywords": [
     "react-native",
     "carousel"
   ],
-  "author": "Nick Poulden <nick@poulden.com> (https://github.com/nick)",
+  "author": "Roland Hordos <rolandhordos@me.com> (https://github.com/rolandhordos)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nick/react-native-carousel/issues"
+    "url": "https://github.com/rolandhordos/react-native-carousel/issues"
   },
-  "homepage": "https://github.com/nick/react-native-carousel",
+  "homepage": "https://github.com/rolandhordos/react-native-carousel",
   "dependencies": {
     "react-timer-mixin": "^0.13.3"
   },

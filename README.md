@@ -22,7 +22,7 @@ indicatorText= '•' // Active indicator content ( You can customize to use any 
 animate={true} // Enable carousel autoplay
 delay={1000} // Set Animation delay between slides
 loop={true} // Allow infinite looped animation. Depends on Prop {...animate} set to true.
- 
+
 ```
 
 ### Usage example
@@ -78,3 +78,10 @@ var styles = StyleSheet.create({
 
 AppRegistry.registerComponent('RNCarousel', () => RNCarousel);
 ```
+## Roadmap
+
+### 0.11.1
+- React 16 deprecation removal
+
+### 0.11.2
+- ES6 and current RN conventions
