@@ -1,3 +1,8 @@
+### 0.11.0
+- fork from (@nick)
+- DRY CarouselPager Refactor (@echoplans)
+- initial scoped NPM @rolandhordos/react-native-carousel
+
 ### 0.10.0
 - Fix horizontal scroll in RN v0.28 (@sghiassy, @dmccer)
 
