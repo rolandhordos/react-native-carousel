@@ -1,21 +1,10 @@
-'use strict';
+import React, { Component } from 'react'
+import { View, Text, Dimensions, StyleSheet } from 'react-native'
+import CarouselPager from './CarouselPager'
 
-var React = require('react');
-var {
-  Dimensions,
-  StyleSheet,
-  Text,
-  View,
-} = require('react-native');
+class Carousel extends Component {
 
-var TimerMixin = require('react-timer-mixin');
-var CarouselPager = require('./CarouselPager');
-
-var Carousel = React.createClass({
-  mixins: [TimerMixin],
-
-  getDefaultProps() {
-    return {
+  static defaultProps = {
       hideIndicators: false,
       indicatorColor: '#000000',
       indicatorSize: 50,
@@ -30,14 +19,14 @@ var Carousel = React.createClass({
       animate: true,
       delay: 1000,
       loop: true,
-    };
-  },
+  }
 
-  getInitialState() {
-    return {
-      activePage: this.props.initialPage > 0 ? this.props.initialPage : 0,
-    };
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      activePage: this.props.initialPage > 0 ? this.props.initialPage : 0
+    }
+  }
 
   getWidth() {
     if (this.props.width !== null) {
@@ -45,7 +34,7 @@ var Carousel = React.createClass({
     } else {
       return Dimensions.get('window').width;
     }
-  },
+  }
 
   componentDidMount() {
     if (this.props.initialPage > 0) {
@@ -55,12 +44,12 @@ var Carousel = React.createClass({
     if (this.props.animate && this.props.children){
         this._setUpTimer();
     }
-  },
+  }
 
   indicatorPressed(activePage) {
     this.setState({activePage});
     this.refs.pager.scrollToPage(activePage);
-  },
+  }
 
   renderPageIndicator() {
     if (this.props.hideIndicators === true) {
@@ -102,14 +91,14 @@ var Carousel = React.createClass({
         {indicators}
       </View>
     );
-  },
+  }
 
   _setUpTimer() {
      if (this.props.children.length > 1) {
          this.clearTimeout(this.timer);
          this.timer = this.setTimeout(this._animateNextPage, this.props.delay);
      }
-  },
+  }
 
   _animateNextPage() {
      var activePage = 0;
@@ -121,18 +110,18 @@ var Carousel = React.createClass({
 
      this.indicatorPressed(activePage);
      this._setUpTimer();
-  },
+  }
 
   _onAnimationBegin() {
      this.clearTimeout(this.timer);
-  },
+  }
 
   _onAnimationEnd(activePage) {
     this.setState({activePage});
     if (this.props.onPageChange) {
       this.props.onPageChange(activePage);
     }
-  },
+  }
 
   render() {
     return (
@@ -148,10 +137,10 @@ var Carousel = React.createClass({
         </CarouselPager>
         {this.renderPageIndicator()}
       </View>
-    );
-  },
+    )
+  }
 
-});
+}
 
 var styles = StyleSheet.create({
   pageIndicator: {
@@ -162,7 +151,8 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     backgroundColor:'transparent',
-  },
-});
+  }
+})
+
 
 module.exports = Carousel;

@@ -2,7 +2,7 @@
 
 ### Installation
 ```bash
-npm install react-native-carousel
+yarn add @rolandhordos/react-native-carousel
 ```
 
 ###Properties
@@ -66,7 +66,7 @@ var RNCarousel = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width: 375,
     flex: 1,
@@ -78,6 +78,12 @@ var styles = StyleSheet.create({
 
 AppRegistry.registerComponent('RNCarousel', () => RNCarousel);
 ```
+
+## Project Norms
+
+- Test Supported with Jest
+- ES6+
+- No Mixins
 ## Roadmap
 
 ### 0.11.1
