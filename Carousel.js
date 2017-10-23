@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
 import { View, Text, Dimensions, StyleSheet } from 'react-native'
 import CarouselPager from './CarouselPager'
+import timer from 'react-timer-hoc'
 
 class Carousel extends Component {
 
   static defaultProps = {
-      hideIndicators: false,
-      indicatorColor: '#000000',
-      indicatorSize: 50,
-      inactiveIndicatorColor: '#999999',
-      indicatorAtBottom: true,
-      indicatorOffset: 250,
-      indicatorText: '•',
-      inactiveIndicatorText: '•',
-      width: null,
-      initialPage: 0,
-      indicatorSpace: 25,
-      animate: true,
-      delay: 1000,
-      loop: true,
+    hideIndicators: false,
+    indicatorColor: '#000000',
+    indicatorSize: 50,
+    inactiveIndicatorColor: '#999999',
+    indicatorAtBottom: true,
+    indicatorOffset: 250,
+    indicatorText: '•',
+    inactiveIndicatorText: '•',
+    width: null,
+    initialPage: 0,
+    indicatorSpace: 25,
+    animate: true,
+    delay: 1000,
+    loop: true,
   }
 
   constructor(props) {
@@ -95,7 +96,7 @@ class Carousel extends Component {
 
   _setUpTimer() {
      if (this.props.children.length > 1) {
-         this.clearTimeout(this.timer);
+        timer.clearTimeout();
          this.timer = this.setTimeout(this._animateNextPage, this.props.delay);
      }
   }
@@ -154,5 +155,6 @@ var styles = StyleSheet.create({
   }
 })
 
+Carousel = timer(1000)(Carousel)
 
 module.exports = Carousel;
