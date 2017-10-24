@@ -1,4 +1,9 @@
-### 0.11.0
+### 0.11.1 alpha
+- Work in Progress - packaging for client testing
+- component evaluation for timer to replace mixin
+- simple render test passing
+
+### 0.11.0 alpha
 - fork from (@nick)
 - DRY CarouselPager Refactor (@echoplans)
 - initial scoped NPM @rolandhordos/react-native-carousel
