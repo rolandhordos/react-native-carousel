@@ -38,17 +38,11 @@ Then paste the following into `RNCarousel/index.ios.js`:
 ```javascript
 'use strict';
 
-var React = require('react-native');
-var {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} = React;
+import React, { Component } from 'react'
+import { View, Text, StyleSheet, AppRegistry } from 'react-native'
+import Carousel from 'react-native-carousel'
 
-var Carousel = require('react-native-carousel');
-
-var RNCarousel = React.createClass({
+export default class RNCarousel extends Component {
   render: function() {
     return (
       <Carousel width={375}>
@@ -62,9 +56,9 @@ var RNCarousel = React.createClass({
           <Text>Page 3</Text>
         </View>
       </Carousel>
-    );
+    )
   }
-});
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -73,10 +67,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'transparent',
-  },
-});
+  }
+})
 
-AppRegistry.registerComponent('RNCarousel', () => RNCarousel);
+AppRegistry.registerComponent('RNCarousel', () => RNCarousel)
 ```
 
 ## Project Norms
