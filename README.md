@@ -84,10 +84,14 @@ AppRegistry.registerComponent('RNCarousel', () => RNCarousel);
 - Test Supported with Jest
 - ES6+
 - No Mixins
+- Good Mobile Citizen
+  - high frequency timers enabled only when required
+
 ## Roadmap
 
 ### 0.11.1
 - React 16 deprecation removal
+- react-timer-mixin replaced with react-timer-hoc
 
 ### 0.11.2
 - ES6 and current RN conventions

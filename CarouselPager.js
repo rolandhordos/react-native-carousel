@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native'
 
 export default class CarouselPager extends Component {
 
-  scrollToPage(page, animated) {
+  scrollToPage = (page, animated) => {
     if (typeof animated === 'undefined') {
       animated = true;
     }

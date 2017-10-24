@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { View, Text, Dimensions, StyleSheet } from 'react-native'
 import CarouselPager from './CarouselPager'
+import timer from 'react-native-timer'  // exported as an instance
 
-class Carousel extends Component {
+export default class Carousel extends Component {
 
   static defaultProps = {
       hideIndicators: false,
@@ -21,12 +22,11 @@ class Carousel extends Component {
       loop: true,
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      activePage: this.props.initialPage > 0 ? this.props.initialPage : 0
-    }
+  state = {
+    activePage: this.props.initialPage > 0 ? this.props.initialPage : 0
   }
+
+  static defaultTimerName = 'animation'
 
   getWidth() {
     if (this.props.width !== null) {
@@ -95,13 +95,12 @@ class Carousel extends Component {
 
   _setUpTimer() {
      if (this.props.children.length > 1) {
-         this.clearTimeout(this.timer);
-         this.timer = this.setTimeout(this._animateNextPage, this.props.delay);
+       timer.setTimeout(Carousel.defaultTimerName, this._animateNextPage, this.props.delay);
      }
   }
 
-  _animateNextPage() {
-     var activePage = 0;
+  _animateNextPage = () => {
+     var activePage = 0
      if (this.state.activePage < this.props.children.length - 1) {
          activePage = this.state.activePage + 1;
      } else if (!this.props.loop) {
@@ -112,11 +111,11 @@ class Carousel extends Component {
      this._setUpTimer();
   }
 
-  _onAnimationBegin() {
-     this.clearTimeout(this.timer);
+  _onAnimationBegin = () => {
+     timer.clearTimeout(Carousel.defaultTimerName)
   }
 
-  _onAnimationEnd(activePage) {
+  _onAnimationEnd = (activePage) => {
     this.setState({activePage});
     if (this.props.onPageChange) {
       this.props.onPageChange(activePage);
@@ -142,7 +141,7 @@ class Carousel extends Component {
 
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   pageIndicator: {
     position: 'absolute',
     flexDirection: 'row',
@@ -153,6 +152,3 @@ var styles = StyleSheet.create({
     backgroundColor:'transparent',
   }
 })
-
-
-module.exports = Carousel;
