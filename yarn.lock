@@ -1975,7 +1975,7 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-invariant@^2.2.2, invariant@~2.2.2:
+invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -3353,6 +3353,10 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-timer@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-timer/-/react-native-timer-1.3.1.tgz#c1d03cdad596136cd81b9d3684f2161089ea1ab7"
+
 react-native@^0.49.3:
   version "0.49.3"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.49.3.tgz#0ca459ee49f9c59e8326b2ced9e34c59333a2f26"
@@ -3422,13 +3426,6 @@ react-test-renderer@^16.0.0:
   dependencies:
     fbjs "^0.8.16"
     object-assign "^4.1.1"
-
-react-timer-hoc@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-timer-hoc/-/react-timer-hoc-2.3.0.tgz#f62db59e4d6086f1d8b9ec57345a9b971620b6fe"
-  dependencies:
-    invariant "~2.2.2"
-    prop-types "^15.6.0"
 
 react-timer-mixin@^0.13.2:
   version "0.13.3"
