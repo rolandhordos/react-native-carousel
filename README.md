@@ -2,7 +2,7 @@
 
 ### Installation
 ```bash
-npm install react-native-carousel
+yarn add @rolandhordos/react-native-carousel
 ```
 
 ###Properties
@@ -38,17 +38,11 @@ Then paste the following into `RNCarousel/index.ios.js`:
 ```javascript
 'use strict';
 
-var React = require('react-native');
-var {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} = React;
+import React, { Component } from 'react'
+import { View, Text, StyleSheet, AppRegistry } from 'react-native'
+import Carousel from 'react-native-carousel'
 
-var Carousel = require('react-native-carousel');
-
-var RNCarousel = React.createClass({
+export default class RNCarousel extends Component {
   render: function() {
     return (
       <Carousel width={375}>
@@ -62,26 +56,36 @@ var RNCarousel = React.createClass({
           <Text>Page 3</Text>
         </View>
       </Carousel>
-    );
+    )
   }
-});
+}
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width: 375,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'transparent',
-  },
-});
+  }
+})
 
-AppRegistry.registerComponent('RNCarousel', () => RNCarousel);
+AppRegistry.registerComponent('RNCarousel', () => RNCarousel)
 ```
+
+## Project Norms
+
+- Test Supported with Jest
+- ES6+
+- No Mixins
+- Good Mobile Citizen
+  - high frequency timers enabled only when required
+
 ## Roadmap
 
 ### 0.11.1
 - React 16 deprecation removal
+- react-timer-mixin replaced with react-timer-hoc
 
 ### 0.11.2
 - ES6 and current RN conventions
