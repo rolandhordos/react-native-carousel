@@ -1,6 +1,6 @@
 {
   "name": "@rolandhordos/react-native-carousel",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "Simple carousel component for react-native",
   "main": "lib/Carousel.js",
   "scripts": {
