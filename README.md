@@ -81,10 +81,10 @@ AppRegistry.registerComponent('RNCarousel', () => RNCarousel)
 
 ## Roadmap
 
-### 0.11.3
+### 0.11.4
 - Jest Snapshot testing
 - Initial pager testing
 
-### 0.11.4
+### 0.11.5
 - Beginnings of animation testing
 - ScrollViewMock enhancements

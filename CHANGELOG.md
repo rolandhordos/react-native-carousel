@@ -1,4 +1,4 @@
-### 0.11.2 alpha
+### 0.11.2-3
 - Simple Carousel static render test passing
 - ES6+ used throughout with current React-Native conventions
 - React 16 deprecation removal
