@@ -1,3 +1,11 @@
+### 0.11.2 alpha
+- Simple Carousel static render test passing
+- ES6+ used throughout with current React-Native conventions
+- React 16 deprecation removal
+- react-timer-mixin replaced with 'react-native-timer'
+- package restructuring for transpiled release npm
+- 'prepack' action added, for use before 'pack'
+
 ### 0.11.1 alpha
 - Work in Progress - packaging for client testing
 - component evaluation for timer to replace mixin
