@@ -27,30 +27,22 @@ loop={true} // Allow infinite looped animation. Depends on Prop {...animate} set
 
 ### Usage example
 
-Assuming you have `npm install -g react-native-cli`, first generate an app:
-
-    react-native init RNCarousel
-    cd RNCarousel
-    yarn add @rolandhordos/react-native-carousel
-
-Then paste the following into `RNCarousel/index.ios.js`:
-
 ```javascript
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, AppRegistry } from 'react-native'
 import Carousel from '@rolandhordos/react-native-carousel'
 
-export default class RNCarousel extends Component {
-  render: function() {
+export default class App extends Component {
+  render() {
     return (
-      <Carousel width={375}>
-        <View style={styles.container}>
+      <Carousel animate={false}>
+        <View style={styles.slide}>
           <Text>Page 1</Text>
         </View>
-        <View style={styles.container}>
+        <View style={styles.slide}>
           <Text>Page 2</Text>
         </View>
-        <View style={styles.container}>
+        <View style={styles.slide}>
           <Text>Page 3</Text>
         </View>
       </Carousel>
@@ -59,7 +51,7 @@ export default class RNCarousel extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  slide: {
     width: 375,
     flex: 1,
     justifyContent: 'center',
@@ -67,8 +59,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   }
 })
-
-AppRegistry.registerComponent('RNCarousel', () => RNCarousel)
 ```
 
 ## Project Norms
@@ -81,10 +71,10 @@ AppRegistry.registerComponent('RNCarousel', () => RNCarousel)
 
 ## Roadmap
 
-### 0.11.4
+### 0.11.5
 - Jest Snapshot testing
 - Initial pager testing
 
-### 0.11.5
+### 0.11.6
 - Beginnings of animation testing
 - ScrollViewMock enhancements

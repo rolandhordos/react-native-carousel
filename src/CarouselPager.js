@@ -10,7 +10,7 @@ export default class CarouselPager extends Component {
     this.refs.scrollView.scrollTo({x: page * this.props.width, y: 0, animated: animated});
   }
 
-  _onMomentumScrollEnd(e) {
+  _onMomentumScrollEnd = (e) => {
     var activePage = e.nativeEvent.contentOffset.x / this.props.width;
     this.props.onEnd(activePage);
   }
