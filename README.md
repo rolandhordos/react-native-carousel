@@ -31,16 +31,14 @@ Assuming you have `npm install -g react-native-cli`, first generate an app:
 
     react-native init RNCarousel
     cd RNCarousel
-    npm install react-native-carousel --save
+    yarn add @rolandhordos/react-native-carousel
 
 Then paste the following into `RNCarousel/index.ios.js`:
 
 ```javascript
-'use strict';
-
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, AppRegistry } from 'react-native'
-import Carousel from 'react-native-carousel'
+import Carousel from '@rolandhordos/react-native-carousel'
 
 export default class RNCarousel extends Component {
   render: function() {
@@ -83,9 +81,10 @@ AppRegistry.registerComponent('RNCarousel', () => RNCarousel)
 
 ## Roadmap
 
-### 0.11.1
-- React 16 deprecation removal
-- react-timer-mixin replaced with react-timer-hoc
+### 0.11.3
+- Jest Snapshot testing
+- Initial pager testing
 
-### 0.11.2
-- ES6 and current RN conventions
+### 0.11.4
+- Beginnings of animation testing
+- ScrollViewMock enhancements
