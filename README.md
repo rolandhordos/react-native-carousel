@@ -1,31 +1,31 @@
-## Carousel component for react-native
+# Carousel component for react-native
 
-### Installation
+## Installation
 ```bash
 yarn add @rolandhordos/react-native-carousel
 ```
 
-###Properties
+## Usage
 
-```
-hideIndicators={false} // Set to true to hide the indicators
-indicatorColor="#FFFFFF" // Active indicator color
-indicatorSize={20} // Indicator bullet size
-indicatorSpace={15} // space between each indicator
-inactiveIndicatorColor="#999999" // Inactive indicator color
-indicatorAtBottom={true} // Set to false to show the indicators at the top
-indicatorOffset={250} // Indicator relative position from top or bottom
-onPageChange={callback} // Called when the active page changes
-inactiveIndicatorText= '•' // Inactive indicator content ( You can customize to use any Unicode character )
-indicatorText= '•' // Active indicator content ( You can customize to use any Unicode character )
+### Properties
 
-animate={true} // Enable carousel autoplay
-delay={1000} // Set Animation delay between slides
-loop={true} // Allow infinite looped animation. Depends on Prop {...animate} set to true.
+| Prop | Description | Default |
+|---|---|---|
+|**`hideIndicators`**|Set to true to hide the indicators |*false*|
+|**`indicatorColor `**| Active indicator color |*#FFFFFF*|
+|**`indicatorSize `**| Indicator bullet size |*20*|
+|**`indicatorSpace `**| Spacing between each indicator |*15*|
+|**`inactiveIndicatorColor `**| Inactive indicator color |*#999999*|
+|**`indicatorAtBottom `**| Set to false to show the indicators at the top |*true*|
+|**`indicatorOffset `**| Indicator relative position from top or bottom |*250*|
+|**`onPageChange `**| Called when the active page changes |*callback / method*|
+|**`inactiveIndicatorText`**| Inactive indicator content ( You can customize to use any Unicode character ) |*•*|
+|**`indicatorText`**| Active indicator content ( You can customize to use any Unicode character ) |*•*|
+|**`animate`**| Enable carousel autoplay |*true*|
+|**`delay`**| Set Animation delay between slides |*1000*|
+|**`loop`**| Allow infinite looped animation. Depends on Prop **`animate`** set to *true*. |*true*|
 
-```
-
-### Usage example
+### Example
 
 ```javascript
 import React, { Component } from 'react'
