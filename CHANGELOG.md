@@ -1,3 +1,7 @@
+### 0.11.4
+- Release 0.11.4 fixed bound method for momentum scroll event
+- Fixed and simplified the inline sample code for current React Native
+
 ### 0.11.2-3
 - Simple Carousel static render test passing
 - ES6+ used throughout with current React-Native conventions
